@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+body {
+    font-family:"Jersey 10", sans-serif;
+    font-style: normal;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(158,106,7,1) 0%, rgba(79,170,7,1) 0%, rgba(140,82,27,1) 100%);
+}
+
+#typewriter {
+    font-family:"Jersey 10", sans-serif;
+    display: inline-block;
+    overflow:hidden;
+    border-right: .15em solid green;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    max-width: 20ch;
+    animation: 
+        typing 6s steps(20, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0}
+    to { width: 20ch;}
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent}
+    50% { border-color: green; }
+}
+
+#board {
+    width: 540px;
+    height: 540px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background: url(../img/grass.jpg);
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+    cursor: url('../img/hoe.png'), auto;
+}
+
+#board div {
+    width: 180px;
+    height: 180px;
+    background-image: url("../img/hole.png");
+    background-size: cover;
+}
+
+#board div img {
+    width: 100px;
+    height: 100px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
